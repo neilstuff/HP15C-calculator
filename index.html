@@ -1,0 +1,154 @@
+<html>
+
+<head>
+ 
+    <title>HP-15C</title>
+    <link rel="stylesheet" href="assets/styles/font.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <script src="node_modules/sprintf-js/dist/sprintf.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/matrix.js"></script>
+    <script type="text/javascript" src="assets/javascripts/hp15c.js"></script>
+    <script type="text/javascript" src="assets/javascripts/test.js"></script>
+    <script type="text/javascript" src="assets/javascripts/main.js"></script>
+ 
+</head>
+
+<body style="overflow:none;">
+    <div id="stack">
+        <table>
+            <tr>
+                <td align="right">T</td>
+                <td><input id="stack_3" size="8"></td>
+                <td align="right" class="stacki">Ti</td>
+                <td class="stacki"><input id="stacki_3" size="8"></td>
+            </tr>
+            <tr>
+                <td align="right">Z</td>
+                <td><input id="stack_2" size="8"></td>
+                <td align="right" class="stacki">Zi</td>
+                <td class="stacki"><input id="stacki_2" size="8"></td>
+            </tr>
+            <tr>
+                <td align="right">Y</td>
+                <td><input id="stack_1" size="8"></td>
+                <td align="right" class="stacki">Yi</td>
+                <td class="stacki"><input id="stacki_1" size="8"></td>
+            </tr>
+            <tr>
+                <td align="right">X</td>
+                <td><input id="stack_0" size="8"></td>
+                <td align="right" class="stacki">Xi</td>
+                <td class="stacki"><input id="stacki_0" size="8"></td>
+            </tr>
+            <tr>
+                <td align="right">last X</td>
+                <td><input id="last_x" size="8"></td>
+                <td align="right" class="stacki">last Xi</td>
+                <td class="stacki"><input id="last_xi" size="8"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="reg">
+        <table>
+            <tr>
+                <td>0</td>
+                <td><input id="reg_0"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input id="reg_1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input id="reg_2"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input id="reg_3"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input id="reg_4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input id="reg_5"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><input id="reg_6"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><input id="reg_7"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><input id="reg_8"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><input id="reg_9"></td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td><input id="reg_I"></td>
+            </tr>
+        </table>
+    </div>
+    <img class="preload" src="assets/images/0.png">
+    <img class="preload" src="assets/images/1.png">
+    <img class="preload" src="assets/images/2.png">
+    <img class="preload" src="assets/images/3.png">
+    <img class="preload" src="assets/images/4.png">
+    <img class="preload" src="assets/images/5.png">
+    <img class="preload" src="assets/images/6.png">
+    <img class="preload" src="assets/images/7.png">
+    <img class="preload" src="assets/images/8.png">
+    <img class="preload" src="assets/images/9.png">
+    <img class="preload" src="assets/images/decimal.png">
+    <img class="preload" src="assets/images/comma.png">
+    <img class="preload" src="assets/images/neg.png">
+    <div id="frame" style="overflow:none;">
+        <img id="calc" src="assets/images/hp11c.png" style="width:800; height:455px;">
+        <div id="press">
+            <img id="presskey" src="assets/images/hp11c.png" style="width:800; height:455px;"></img>
+        </div>            
+        <div>
+            <img id="presskey" src="assets/images/HP32C-LARGE.png" style="position:absolute; top:20px; left:720px; width:48px; height:48px; z-index: 100;"></img>
+        </div>
+        <img id="dig0" class="lcd">
+        <img id="dig1"class="lcd">
+        <img id="dig2" class="lcd">
+        <img id="dig3" class="lcd">
+        <img id="dig4" class="lcd">
+        <img id="dig5" class="lcd">
+        <img id="dig6" class="lcd">
+        <img id="dig7" class="lcd">
+        <img id="dig8" class="lcd">
+        <img id="dig9" class="lcd">
+        <img id="decimal0" class="lcd">
+        <img id="decimal1" class="lcd">
+        <img id="decimal2" class="lcd">
+        <img id="decimal3" class="lcd">
+        <img id="decimal4" class="lcd">
+        <img id="decimal5" class="lcd">
+        <img id="decimal6" class="lcd">
+        <img id="decimal7" class="lcd">
+        <img id="decimal8" class="lcd">
+        <img id="decimal9" class="lcd">
+        <img id="neg" class="lcd" src="assets/images/neg.png">
+        <div id="user" class="indicator">USER</div>
+        <div id="f" class="shift indicator">f</div>
+        <div id="g" class="shift indicator">g</div>
+        <div id="trigmode" class="indicator"></div>
+        <div id="complex" class="indicator">C</div>
+        <div id="program" class="indicator">PRGM</div>
+    </div>
+    <div id="test">
+        <input type="button" style="background-color: rgba(0,0,0,0.1); display:none" onclick="run_test()" value="Test">
+    </div>
+</body>
+
+</html>

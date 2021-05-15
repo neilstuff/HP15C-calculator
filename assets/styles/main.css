@@ -1,0 +1,148 @@
+html {
+    background-color: rgb(197, 204, 202);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 8px;
+}
+  
+canvas {
+  display: block;
+  margin: auto;
+  position :absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast
+}
+
+td {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: LCDBOLD;
+    color : rgba(0,0,0, 0.7);
+}
+
+input {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: LCDBOLD;
+    border:none;
+    background: rgba(0,0,0, 0.0);
+    border: 1px solid rgba(0,0,0, 0.2);
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#stack {
+    float: right;
+}
+
+.stacki {
+    display: none;
+}
+
+#reg {
+    clear: right;
+    float: right;
+    font-size: 6px;
+}
+
+#test {
+    clear: right;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}
+
+#frame {
+    position: relative;
+    height: 450;
+}
+
+#calc {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#press {
+    position: absolute;
+    width: 49;
+    height: 54;
+    overflow: hidden;
+    display: none;
+}
+
+#presskey {
+    position: absolute;
+}
+
+.preload {
+    display: none;
+}
+
+.lcd {
+    position: absolute;
+    display: none;
+}
+
+.indicator {
+    display: none;
+    position: absolute;
+    top: 85;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.indicator-on {
+    display: block;
+}
+
+#user {
+    left: 190;
+}
+
+#f {
+    left: 230;
+}
+
+#g {
+    left: 250;
+}
+
+#trigmode {
+    left: 300;
+}
+
+#complex {
+    left: 390;
+}
+
+#program {
+    left: 410;
+}
+
+.help {
+    position: absolute;
+    display: none;
+    padding-bottom: 1px;
+    border: thin solid black;
+    background: yellow;
+    color: black;
+    font-family: monospace;
+    width: 1em;
+    text-align: center;
+}
+
+.showhelp {
+    display: block;
+}

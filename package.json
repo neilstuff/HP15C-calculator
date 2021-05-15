@@ -1,0 +1,48 @@
+{
+  "name": "hp15c-calculator",
+  "version": "1.0.0",
+  "description": "HP15C-calculator application",
+  "main": "main.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish never",
+    "start": "electron ."
+  },
+  "build": {
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesourorange/HP15C-calculator.git"
+  },
+  "keywords": [
+    "Electron",
+    "HP15C",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "electron-disable-file-drop": "^1.0.2",
+    "sprintf": "^0.1.5",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1"
+  },
+  "bugs": {
+    "url": "https://github.com/thesourorange/HP15C-calculator/issues"
+  },
+  "homepage": "https://github.com/thesourorange/HP15C-calculator#readme"
+}
