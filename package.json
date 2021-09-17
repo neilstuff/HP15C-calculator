@@ -33,13 +33,13 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "dependencies": {
-    "electron-disable-file-drop": "^1.0.2",
     "sprintf": "^0.1.5",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "node": "^16.9.1"
   },
   "devDependencies": {
-    "electron": "^8.2.3",
-    "electron-builder": "^22.5.1"
+    "electron": "^14.0.1",
+    "electron-builder": "^22.11.7"
   },
   "bugs": {
     "url": "https://github.com/thesourorange/HP15C-calculator/issues"
